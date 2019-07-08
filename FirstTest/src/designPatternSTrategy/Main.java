@@ -8,6 +8,6 @@ public class Main {
 		
 		Discounter easterDiscounter = amount -> amount.multiply(BigDecimal.valueOf(0.5));
 		easterDiscounter.applyDiscount(BigDecimal.valueOf(0.5));
-		
+		System.out.println("done");
 	}
 }
