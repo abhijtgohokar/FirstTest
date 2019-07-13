@@ -1,15 +1,14 @@
-package threads;
+package designPatternProducerConsumer;
 
 import java.util.concurrent.BlockingQueue;
 
-public class Producer implements Runnable{
+public class Consumer implements Runnable{
 
 	private static BlockingQueue<Integer> queue;
 	private static int maxSize;
 	private static int counter=0;
-	
-
-	public Producer(BlockingQueue<Integer> queue2, int maxSize2) {
+	public static boolean nothingToProcess = false;
+	public Consumer(BlockingQueue<Integer> queue2, int maxSize2){
 		this.queue=queue2;
 		this.maxSize = maxSize2;
 	}
@@ -17,8 +16,8 @@ public class Producer implements Runnable{
 		
 		while(true){
 			synchronized (queue) {
-				while(queue.size()==maxSize){
-					System.out.println("max size reached. Wait");
+				while(queue.isEmpty()){
+					System.out.println("Queue is empty. Wait");
 					try {
 						queue.wait();
 					} catch (InterruptedException e) {
@@ -26,8 +25,11 @@ public class Producer implements Runnable{
 						e.printStackTrace();
 					}
 				}
-				System.out.println("producing : ");
-				queue.add(++counter);
+				while(nothingToProcess) {
+					System.out.println("nothing to process. End process.");
+					return;
+				}
+				System.out.println("consuming : "+queue.remove());
 				queue.notifyAll();
 			}
 		}
