@@ -1,5 +1,5 @@
-import threads.TestRunnable;
-import threads.TestThread;
+import com.learning.abhijit.threads.TestRunnable;
+import com.learning.abhijit.threads.TestThread;
 
 
 public class MainClass {

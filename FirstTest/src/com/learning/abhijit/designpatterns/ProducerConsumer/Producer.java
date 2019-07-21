@@ -1,4 +1,4 @@
-package designPatternProducerConsumer;
+package com.learning.abhijit.designpatterns.ProducerConsumer;
 
 import java.util.concurrent.BlockingQueue;
 

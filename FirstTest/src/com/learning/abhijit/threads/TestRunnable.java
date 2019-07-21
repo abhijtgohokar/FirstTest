@@ -1,4 +1,4 @@
-package threads;
+package com.learning.abhijit.threads;
 
 public class TestRunnable implements Runnable{
 

@@ -1,4 +1,4 @@
-package designPatternSTrategy;
+package com.learning.abhijit.designpatterns.Strategy;
 
 import java.math.BigDecimal;
 

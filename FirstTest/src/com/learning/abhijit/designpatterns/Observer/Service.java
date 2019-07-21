@@ -1,4 +1,4 @@
-package designPatternObserver;
+package com.learning.abhijit.designpatterns.Observer;
 
 public class Service {
 

@@ -1,4 +1,4 @@
-package threads;
+package com.learning.abhijit.threads;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;

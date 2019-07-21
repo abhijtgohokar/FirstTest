@@ -1,4 +1,4 @@
-package threads;
+package com.learning.abhijit.threads;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CyclicBarrier;

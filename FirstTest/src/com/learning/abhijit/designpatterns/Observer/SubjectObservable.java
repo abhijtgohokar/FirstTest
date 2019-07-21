@@ -1,4 +1,4 @@
-package designPatternObserver;
+package com.learning.abhijit.designpatterns.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
