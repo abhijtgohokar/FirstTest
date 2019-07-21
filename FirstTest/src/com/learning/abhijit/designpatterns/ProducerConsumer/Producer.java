@@ -4,7 +4,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class Producer implements Runnable{
 
-	private static BlockingQueue<Integer> queue;
+	private BlockingQueue<Integer> queue;
 	private static int maxSize;
 	private static int counter=0;
 	private static int noOfRecords = 0;

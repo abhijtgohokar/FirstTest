@@ -4,7 +4,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class Consumer implements Runnable{
 
-	private static BlockingQueue<Integer> queue;
+	private BlockingQueue<Integer> queue;
 	private static int maxSize;
 	private static int counter=0;
 	public static boolean nothingToProcess = false;
@@ -25,7 +25,9 @@ public class Consumer implements Runnable{
 						e.printStackTrace();
 					}
 				}
-				while(nothingToProcess) {
+				while (nothingToProcess && queue.isEmpty() ) {
+					//queue empty check is needed to process remaining items after
+					//producer marked the flag as true
 					System.out.println("nothing to process. End process.");
 					return;
 				}
